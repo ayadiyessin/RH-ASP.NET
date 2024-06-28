@@ -1,0 +1,85 @@
+﻿@model ProjetDotnet.Models.EmployerFormation
+
+@{
+    ViewData["Title"] = "Ajouter";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Affecter Formation</h1>
+
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Employer" asp-action="Index">Liste des employées </a></li>
+                        <li class="breadcrumb-item active">Affecter formation</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Affecter Formation</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label asp-for="employerId" class="control-label">Employer : @ViewBag.ListEmployers[0].nom_emp  @ViewBag.ListEmployers[0].prenom_emp</label></br>
+                                    <label class="control-label">CIN</label>
+                                    <select  asp-for="employerId" class="form-control"
+                                            asp-items="@(new SelectList(ViewBag.ListEmployers,"Id_emp","cin_emp"))">
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="formationId" class="control-label">Formation</label>
+                                    <select asp-for="formationId" class="form-control" asp-items="@(new SelectList(ViewBag.Listformations,"Id_formation","nom_formation"))">
+                                        <option value="">--Formation--</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="date_deb_empform" class="control-label">Date début formation</label>
+                                    <input asp-for="date_deb_empform" class="form-control" />
+                                    <span asp-validation-for="date_deb_empform" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="date_fin_empform" class="control-label">Date fin formation</label>
+                                    <input asp-for="date_fin_empform" class="form-control" />
+                                    <span asp-validation-for="date_fin_empform" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <a class="btn btn-outline-secondary " asp-controller="Employer" asp-action="Index">Retour</a>
+                                <button type="submit" value="Create" class="btn btn-outline-primary float-right">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,40 @@
+﻿@model ProjetDotnet.Models.Tache
+
+@{
+    ViewData["Title"] = "Terminer Tache";
+}
+
+<div id="deleteModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form asp-action="TacheTerminer">
+                <input type="hidden" asp-for="Id_tache" />
+                <input type="hidden" asp-for="employerId" />
+                <input type="hidden" asp-for="nom_tache" />
+                <input type="hidden" asp-for="date_deb_tache" />
+                <div class="modal-header">
+                    <h5 class="modal-title">Terminer la Tache</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Voulez-vous vraiment terminer la tache de  "@Model.Employer.nom_emp @Model.Employer.prenom_emp" ?</p>
+                    <div class="form-group">
+                        <label asp-for="description_rapp" class="control-label">Description</label>
+                        <textarea asp-for="description_rapp" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                        <span asp-validation-for="description_rapp" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
+
+                    <input type="submit" value="Terminer" class="btn btn-outline-success float-right" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

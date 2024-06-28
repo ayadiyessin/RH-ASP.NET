@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ProjetDotnet.Models.Conge>
+
+@{
+    ViewData["Title"] = "Congé En Attente";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Liste des Congés En Attente</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item active">Liste des congés en attente</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            @foreach (var item in Model)
+            {
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    @Html.DisplayFor(modelItem => item.Employer.nom_emp)   @Html.DisplayFor(modelItem => item.Employer.prenom_emp)
+                                </h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-6">Type de Congé</dt>
+                                    <dd class="col-sm-6">@Html.DisplayFor(modelItem => item.type_conge)</dd>
+                                    <dt class="col-sm-6">Description Congé</dt>
+                                    <dd class="col-sm-6">@Html.DisplayFor(modelItem => item.description_conge)</dd>
+                                    <dt class="col-sm-6">Date début de Congé</dt>
+                                    <dd class="col-sm-6"> @Html.DisplayFor(modelItem => item.date_deb_conge)</dd>
+                                    <dt class="col-sm-6">Date fin de Congé</dt>
+                                    <dd class="col-sm-6"> @Html.DisplayFor(modelItem => item.date_fin_conge)</dd>
+                                </dl>
+
+
+
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button class="btn btn-outline-danger openDeleteModal" id="openDeleteModal" data-url="@Url.Action("BtnRefuserConge", "Conge", new { id = @item.Id_conge })">
+                                    Refuser
+                                </button>
+                                <button class="btn btn-outline-warning float-right openDeleteModal" id="openDeleteModal" data-url="@Url.Action("BtnConfirmerConge", "Conge", new { id = @item.Id_conge })">
+                                    Confirmée
+                                </button>
+                                @* <a asp-action="Delete" asp-route-id="@item.Id_conge" class="btn btn-outline-secondary">Refuser</a>
+                                <a asp-action="Confirmer" asp-route-id="@item.Id_conge" class="btn btn-outline-warning float-right">Confirmée</a> *@
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- ./col -->
+                </div>
+}
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<div id="modalContainer"></div>
+@section scripts {
+
+    <script>
+        $('.openDeleteModal').click(function () {
+            var url = $(this).data('url');
+            $.get(url, function (data) {
+                $('#modalContainer').html(data);
+                $('#deleteModal').modal('show');
+            });
+        });
+
+    </script>
+}

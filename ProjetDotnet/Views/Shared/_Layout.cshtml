@@ -1,0 +1,257 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ProjetDotnet.Areas.Identity.Data
+
+@inject SignInManager<Admin> SignInManager
+@inject UserManager<Admin> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gestion RH</title>
+    <!-- jebnehom mel admin lte starter.html -->
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <!-- zedneha fi les href w script lkol ~/adminlte/ -->
+    <link rel="stylesheet" href="~/adminlte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="~/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="~/adminlte/plugins/jqvmap/jqvmap.min.css">
+    <!-- houni bedelna script bel styles jebneha mel loutaa-->
+    @await RenderSectionAsync("Styles", required: false)
+
+
+</head>
+@if (SignInManager.IsSignedIn(User))
+{
+    String userId = UserManager.GetUserId(User);
+
+    IdentityUser user = await UserManager.FindByIdAsync(userId);
+
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <partial name="_Navbar" /><!--appeler navbar layout-->
+
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <a class="brand-link">
+                    <img src="~/adminlte/dist/img/logoRH.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light">Gestion RH</span>
+                </a>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="~/adminlte/dist/img/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
+                        </div>
+                        <div class="info">
+                            <a class="d-block">
+                                @{ String ema = user.Email; } @ema
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <!-- Add icons to the links using the .nav-icon class
+                                 with font-awesome or any other icon font library -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Departement" asp-action="Index">
+                                    <i class="nav-icon fas fa-building"></i>
+                                    <p>
+                                        Departement
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Departement" asp-action="Index">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Liste Departements</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Departement" asp-action="Archiver">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Departements Archivées</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Poste" asp-action="Index">
+                                    <i class="nav-icon fas fa-suitcase"></i>
+                                    <p>
+                                        Poste
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Poste" asp-action="Index">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Liste Postes</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Poste" asp-action="Archiver">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Postes Archivées</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Employer" asp-action="Index">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Employéer
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Employer" asp-action="Index">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Liste Employées</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Employer" asp-action="Archiver">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Employées Archivées</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Conge" asp-action="Index">
+                                    <i class="nav-icon fas fa-address-card"></i>
+                                    <p>
+                                        Conjé
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Conge" asp-action="Index">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Demande Conjé</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Conge" asp-action="ConfirmerConge">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Conjé Confirmé</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Conge" asp-action="RefuserConge">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Conjé Refuser</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Formation" asp-action="Index">
+                                    <i class="nav-icon fas fa-graduation-cap"></i>
+                                    <p>
+                                        Formation
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Formation" asp-action="Index">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Liste Formations</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Formation" asp-action="Archive">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Formations Archivées</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            @{ Boolean emc = user.EmailConfirmed;}
+                            @if (emc)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Identity/Account/Register">
+                                        <i class="nav-icon fas fa-user-secret"></i>
+                                        <p>
+                                            Ajouter Admin
+                                        </p>
+                                    </a> 
+                                </li>
+                            } 
+                            <li class="nav-item">
+                                
+                                <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    <button id="logout" type="submit" class="nav-link btn btn-link border-0"><i class="nav-icon fas fa-power-off"></i>Déconnexion</button>
+                                </form>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <!-- /.sidebar-menu -->
+                </div>
+                <!-- /.sidebar -->
+
+            </aside>
+
+
+
+            @RenderBody()
+
+            <partial name="_Footer" />
+        </div>
+    </body>
+}
+else
+{
+    @RenderBody()
+}
+    <!--jebnehom mel admin lte -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="~/adminlte/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/adminlte/dist/js/adminlte.min.js"></script>
+    <script src="~/adminlte/plugins/moment/moment.min.js"></script>
+    <script src="~/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="~/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="~/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/adminlte/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="~/adminlte/dist/js/pages/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <!--fin jbenehom-->
+    @await RenderSectionAsync("Scripts", required: false)
+
+</html>

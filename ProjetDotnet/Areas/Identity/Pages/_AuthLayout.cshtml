@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "/Views/Shared/_layout.cshtml";
+}
+<body class="hold-transition login-page">
+
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <h3 class="card-title">Connexion</h3>
+            </div>
+            <div class="card-body">
+                @RenderBody()
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+</body>
+
+@* <div class="row justify-content-center">
+    <div class="col-5 mt-5">
+        <div class="card login-logout-card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Identity/Account/Login">
+                            Log In
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-10 my-4">
+                        @RenderBody();
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+@section Scripts{
+    @await RenderSectionAsync("Scripts", required: false)
+}

@@ -1,0 +1,58 @@
+input[type="checkbox"].demo5 {
+  display: none;
+}
+input[type="checkbox"].demo5 + label {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 1.5rem;
+  padding: 1px;
+  background-color: #6c757d;
+  transition: all 0.5s;
+  margin-top: 0.7rem;
+}
+input[type="checkbox"].demo5 + label::before {
+  box-sizing: border-box;
+  display: block;
+  content: "";
+  height: calc(1rem - 2.5px);
+  width: calc(1rem - 2.5px);
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+input[type="checkbox"].demo5:checked + label {
+  background-color: #01080a;
+}
+input[type="checkbox"].demo5:checked + label::before {
+  margin-left: 1rem;
+}
+
+.tablegliss {
+  height: 250px;
+}
+.checked1 {
+  font-size:12px;
+}
+.tit{
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(102, 105, 108);
+  padding:24px 32px 32px 32px;
+  font-weight:lighter;
+  text-align:center;
+  display:inline;
+  line-height:150px;
+}
+.sty {
+  left: 0%;
+
+  top: 100%;
+
+  height: 300px;
+
+  width: 100%;
+
+  position: absolute;
+}

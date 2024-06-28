@@ -1,0 +1,85 @@
+﻿@model ProjetDotnet.Models.Poste
+
+@{
+    ViewData["Title"] = "Modifier Poste";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Liste des Postes</h1>
+
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Poste" asp-action="Index">Liste des postes </a></li>
+                        <li class="breadcrumb-item active">Mpdifier poste</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Modifier Poste</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label asp-for="Nom_post" class="control-label">Nom</label>
+                                    <input asp-for="Nom_post" class="form-control" />
+                                    <span asp-validation-for="Nom_post" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="description_post" class="control-label">Description</label>
+                                    <input asp-for="description_post" class="form-control" />
+                                    <span asp-validation-for="description_post" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="salaire_post" class="control-label">Salaire</label>
+                                    <input asp-for="salaire_post" class="form-control" />
+                                    <span asp-validation-for="salaire_post" class="text-danger"></span>
+                                </div>
+                                <!-- select -->
+                                <div class="form-group">
+                                    <label asp-for="Id_dep" class="control-label">Département</label>
+                                    <select asp-for="Id_dep" class="form-control"
+                                            asp-items="@(new SelectList(ViewBag.ListDepartements,"Id_dep","Nom_dep"))">
+                                        <option value="">--Departement--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <a class="btn btn-outline-secondary " asp-controller="Poste" asp-action="Index">Retour</a>
+                                <button type="submit" value="Create" class="btn btn-outline-primary float-right">Modifier</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,239 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjetDotnet
+build_property.RootNamespace = ProjetDotnet
+build_property.ProjectDir = C:\Users\USER\source\repos\ProjetDotnet\ProjetDotnet\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\USER\source\repos\ProjetDotnet\ProjetDotnet
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Conge/BtnConfirmerConge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VcQnRuQ29uZmlybWVyQ29uZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Conge/BtnRefuserConge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VcQnRuUmVmdXNlckNvbmdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Conge/ConfirmerConge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VcQ29uZmlybWVyQ29uZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Conge/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Conge/RefuserConge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VcUmVmdXNlckNvbmdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Departement/Archiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0ZW1lbnRcQXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Departement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0ZW1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Departement/depArchiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0ZW1lbnRcZGVwQXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Departement/depDesarchiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0ZW1lbnRcZGVwRGVzYXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Departement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0ZW1lbnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Departement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0ZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/EmployerFormation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJGb3JtYXRpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/EmployerFormation/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJGb3JtYXRpb25cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/EmployerFormation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJGb3JtYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/Archiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcQXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/EmpArchiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcRW1wQXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/EmpDesarchiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcRW1wRGVzYXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Employer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Formation/Archive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0aW9uXEFyY2hpdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Formation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0aW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Formation/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0aW9uXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Formation/FormArchive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0aW9uXEZvcm1BcmNoaXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Formation/FormDesarchive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0aW9uXEZvcm1EZXNhcmNoaXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Formation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Poste/Archiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGVcQXJjaGl2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Poste/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Poste/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Poste/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Poste/PostArchiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGVcUG9zdEFyY2hpdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Poste/PostDesarchiver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGVcUG9zdERlc2FyY2hpdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Tache/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Tache/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Tache/TacheTerminer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVcVGFjaGVUZXJtaW5lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/ProjetDotnet/ProjetDotnet/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kb74znudj3

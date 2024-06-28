@@ -1,0 +1,87 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Ajouter Admin</h1>
+
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item active">Ajouter admin</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Ajouter Admin</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label asp-for="Input.Nom">Nom</label>
+                                        <input asp-for="Input.Nom" class="form-control" autocomplete="username" aria-required="true" />
+                                        <span asp-validation-for="Input.Nom" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Input.Prenom">Prenom</label>
+                                        <input asp-for="Input.Prenom" class="form-control" autocomplete="username" aria-required="true" />
+                                        <span asp-validation-for="Input.Prenom" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Input.Email">Email</label>
+                                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Input.Password">Mot de Passe</label>
+                                        <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Input.ConfirmPassword">Confirmé Mot de Passe</label>
+                                        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn btn-outline-secondary " asp-controller="Home" asp-action="Index">Retour</a>
+                                    <button type="submit" value="Create" class="btn btn-outline-primary float-right">Enregistrer</button>
+                                </div>
+                            </form>
+                        <span class="bg-danger text-white">@ViewBag.error</span>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

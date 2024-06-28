@@ -1,0 +1,177 @@
+﻿@model ProjetDotnet.Models.Employer
+
+@{
+    ViewData["Title"] = "Ajouter Employer";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Liste des Employées</h1>
+
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Employer" asp-action="Index">Liste des employées </a></li>
+                        <li class="breadcrumb-item active">Ajouter employée</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Ajouter Employée</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label asp-for="cin_emp" class="control-label">CIN</label>
+                                    <input asp-for="cin_emp" class="form-control" />
+                                    <span asp-validation-for="cin_emp" class="text-danger"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="nom_emp" class="control-label">Nom</label>
+                                            <input asp-for="nom_emp" class="form-control" />
+                                            <span asp-validation-for="nom_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="prenom_emp" class="control-label">Prenom</label>
+                                            <input asp-for="prenom_emp" class="form-control" />
+                                            <span asp-validation-for="prenom_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="date_naissance_emp" class="control-label">Date de naissance</label>
+                                            <input asp-for="date_naissance_emp" class="form-control" />
+                                            <span asp-validation-for="date_naissance_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="date_embauche_emp" class="control-label">Date d'embauche</label>
+                                            <input asp-for="date_embauche_emp" class="form-control" />
+                                            <span asp-validation-for="date_embauche_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Sexe</label>
+                                    <div class="row">
+
+                                        <div class="col-md-2">
+                                            <div class="custom-control custom-radio">
+                                                <input asp-for="sexe_emp" type="radio" id="customRadio1" name="sexe_emp" value="Homme" class="custom-control-input" />
+                                                <label for="customRadio1" class="custom-control-label">Homme</label>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="custom-control custom-radio">
+                                                <input asp-for="sexe_emp" type="radio" id="customRadio2" name="sexe_emp" value="Femme" class="custom-control-input" />
+                                                <label for="customRadio2" class="custom-control-label">Femme</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8"></div>
+                                    </div>
+                                    <span asp-validation-for="sexe_emp" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ville_emp" class="control-label">Ville</label>
+                                    <select asp-for="ville_emp" class="form-control">
+                                        <option value="">--Ville--</option>
+                                        <option value="Tunis">Tunis</option>
+                                        <option value="Sfax">Sfax</option>
+                                        <option value="Sousse">Sousse</option>
+                                        <option value="Nabeul">Nabeul</option>
+                                        <option value="Monastire">Monastire</option>
+                                    </select>
+                                    <span asp-validation-for="ville_emp" class="text-danger"></span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="adresse_emp" class="control-label">Adresse</label>
+                                            <input asp-for="adresse_emp" class="form-control" />
+                                            <span asp-validation-for="adresse_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="numtell_emp" class="control-label">Numéro de Téléphone</label>
+                                            <input asp-for="numtell_emp" class="form-control" />
+                                            <span asp-validation-for="numtell_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="email_emp" class="control-label">Email</label>
+                                            <input asp-for="email_emp" class="form-control" />
+                                            <span asp-validation-for="email_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="psw_emp" class="control-label">Mot de passe</label>
+                                            <input asp-for="psw_emp" type="password" class="form-control" />
+                                            <span asp-validation-for="psw_emp" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Id_post" class="control-label">Poste</label>
+                                    <select asp-for="Id_post" class="form-control"
+                                            asp-items="@(new SelectList(ViewBag.Listpostes,"Id_post","Nom_post"))">
+                                        <option value="">--Poste--</option>
+                                    </select>
+                                    <span asp-validation-for="Id_post" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+
+                            <div class="card-footer">
+                                <a class="btn btn-outline-secondary " asp-controller="Employer" asp-action="Index">Retour</a>
+                                <button type="submit" value="Create" class="btn btn-outline-primary float-right">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

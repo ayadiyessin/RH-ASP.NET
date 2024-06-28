@@ -1,0 +1,44 @@
+﻿@model ProjetDotnet.Models.Employer
+
+@{
+    ViewData["Title"] = "Desarchiver Employer";
+}
+
+<div id="deleteModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form asp-action="EmpDesarchiver">
+                <input type="hidden" asp-for="Id_emp" />
+                <input type="hidden" asp-for="nom_emp" />
+                <input type="hidden" asp-for="prenom_emp" />
+                <input type="hidden" asp-for="date_naissance_emp" />
+                <input type="hidden" asp-for="date_embauche_emp" />
+                <input type="hidden" asp-for="sexe_emp" />
+                <input type="hidden" asp-for="ville_emp" />
+                <input type="hidden" asp-for="adresse_emp" />
+                <input type="hidden" asp-for="numtell_emp" />
+                <input type="hidden" asp-for="email_emp" />
+                <input type="hidden" asp-for="psw_emp" />
+                <input type="hidden" asp-for="Id_post" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmer la désarchivation</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Voulez-vous vraiment désarchiver l'employer "@Model.nom_emp  @Model.prenom_emp" ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
+
+                    <input type="submit" value="Désarchiver" class="btn btn-outline-danger float-right" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

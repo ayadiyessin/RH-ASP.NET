@@ -1,0 +1,211 @@
+﻿@{
+    ViewData["Title"] = "Page Accueil";
+}
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Employées</span>
+                            <span class="info-box-number">
+                                @ViewBag.CountEmp
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box mb-3">
+                        <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-building"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Départements</span>
+                            <span class="info-box-number">@ViewBag.CountDep</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <!-- fix for small devices only -->
+                <div class="clearfix hidden-md-up"></div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box mb-3">
+                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-suitcase"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Postes</span>
+                            <span class="info-box-number">@ViewBag.CountPost</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box mb-3">
+                        <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-graduation-cap"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Formations</span>
+                            <span class="info-box-number">@ViewBag.CountFor</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-users-slash"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Employées Archivées</span>
+                            <span class="info-box-number">
+                                @ViewBag.CountEmpArch
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box mb-3">
+                        <span class="info-box-icon bg-maroon elevation-1"><i class="fas fa-building"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Départements Archivées</span>
+                            <span class="info-box-number">@ViewBag.CountDepArch</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <!-- fix for small devices only -->
+                <div class="clearfix hidden-md-up"></div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box mb-3">
+                        <span class="info-box-icon bg-olive elevation-1"><i class="fas fa-suitcase"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Postes Archivées</span>
+                            <span class="info-box-number">@ViewBag.CountPostArch</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box mb-3">
+                        <span class="info-box-icon bg-orange elevation-1"><i class="fas fa-graduation-cap"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Formations Archivées</span>
+                            <span class="info-box-number">@ViewBag.CountForArch</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6">
+                    <canvas id="myChart3" width:100%;max-width:600px class="tilegraph"></canvas>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 ">
+                    <br />
+                    <div class="card bg-gradient-success">
+                        <div class="card-header border-0">
+
+                            <h3 class="card-title">
+                                <i class="far fa-calendar-alt"></i>
+                                Calendar
+                            </h3>
+                            <!-- tools card -->
+                            <div class="card-tools">
+
+                                <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <!-- /. tools -->
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body pt-0">
+                            <!--The calendar -->
+                            <div id="calendar" style="width: 100%"></div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.control-sidebar -->
+@section scripts {
+    <script>
+        //CHART 3
+        var yValues3 = [@ViewBag.sexeEmpFemme, @ViewBag.sexeEmpHomme];
+        var xValues3 = ["Femme", "Homme"];
+
+        var barColors3 = [
+            "#b91d47",
+            "#2b5797",
+
+        ];
+        new Chart("myChart3", {
+            type: "pie",
+            data: {
+                labels: xValues3,
+                datasets: [{
+                    backgroundColor: barColors3,
+                    data: yValues3
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Nombre des emplyeurs par sexe "
+                }
+            }
+        });
+        //calander
+
+        $('#calendar').datetimepicker({
+            format: 'L',
+            inline: true
+        })
+
+
+
+    </script>
+}

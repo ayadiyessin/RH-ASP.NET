@@ -1,0 +1,122 @@
+﻿@model IEnumerable<ProjetDotnet.Models.EmployerFormation>
+
+@{
+    ViewData["Title"] = "Liste";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Liste des Formations</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Employer" asp-action="Index">Liste des employées </a></li>
+                        <li class="breadcrumb-item active">Liste des Formations</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- TABLE: LATEST ORDERS -->
+                    <div class="card">
+                        <div class="card-header border-transparent">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h3 class="card-title">Liste des formations</h3>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a asp-action="Create" asp-route-id="@ViewBag.ListEmployers[0].Id_emp" class="btn btn-outline-info float-right">Ajouter <i class="fa fa-plus-circle"></i></a>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-12">
+                                    <div class="card-tools ">
+                                        <div class="input-group input-group-sm" style="width: 200px;">
+                                            <input type="text" name="table_search" id="myInput" class="form-control " placeholder="Recherche">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Employée</th>
+                                            <th>Formation</th>
+                                            <th>Date début</th>
+                                            <th>Date fin</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listedep">
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Id_empform)
+                                                </td>
+                                                <td>
+                                                    @ViewBag.ListEmployers[0].nom_emp @ViewBag.ListEmployers[0].prenom_emp
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Formation.nom_formation)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.date_deb_empform)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.date_fin_empform)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@section scripts {
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#listedep tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

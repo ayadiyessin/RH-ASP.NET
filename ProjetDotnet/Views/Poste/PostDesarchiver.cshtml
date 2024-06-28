@@ -1,0 +1,36 @@
+﻿@model ProjetDotnet.Models.Poste
+
+@{
+    ViewData["Title"] = "Desarchiver Poste";
+}
+
+<div id="deleteModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form asp-action="PostDesarchiver">
+                <input type="hidden" asp-for="Id_post" />
+                <input type="hidden" asp-for="Nom_post" />
+                <input type="hidden" asp-for="description_post" />
+                <input type="hidden" asp-for="salaire_post" />
+                <input type="hidden" asp-for="Id_dep" />
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmer la Désarchivation</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body">
+                    <p>Voulez-vous vraiment désarchiver l'élément "@Model.Nom_post" ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
+
+                    <input type="submit" value="Désarchiver" class="btn btn-outline-danger float-right" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

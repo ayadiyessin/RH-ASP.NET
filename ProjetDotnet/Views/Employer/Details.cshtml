@@ -1,0 +1,136 @@
+﻿@model ProjetDotnet.Models.Employer
+
+@{
+    ViewData["Title"] = "Profile Employer";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Liste des Employées</h1>
+
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Employer" asp-action="Index">Liste des employées </a></li>
+                        <li class="breadcrumb-item active">Profile employée</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="card card-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-info">
+                            <h3 class="widget-user-username">@Html.DisplayFor(model => model.nom_emp) @Html.DisplayFor(model => model.prenom_emp)</h3>
+                            <h5 class="widget-user-desc">@Html.DisplayFor(model => model.Poste.Nom_post)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6 border-right">
+                                    <div class="description-block">
+                                        <h5 class="description-header">CIN Employer</h5>
+                                        <span >@Html.DisplayFor(model => model.cin_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-sm-6">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Sexe</h5>
+                                        <span >@Html.DisplayFor(model => model.sexe_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6 border-right">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Date de Naissance</h5>
+                                        <span >@Html.DisplayFor(model => model.date_naissance_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-sm-6 ">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Numéro de Téléphone</h5>
+                                        <span >@Html.DisplayFor(model => model.numtell_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6 border-right">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Adresse</h5>
+                                        <span >@Html.DisplayFor(model => model.adresse_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-sm-6 ">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Ville</h5>
+                                        <span >@Html.DisplayFor(model => model.ville_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6 border-right">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Email</h5>
+                                        <span >@Html.DisplayFor(model => model.email_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-sm-6 ">
+                                    <div class="description-block">
+                                        <h5 class="description-header">Date d'embauche</h5>
+                                        <span>@Html.DisplayFor(model => model.date_embauche_emp)</span>
+                                    </div>
+                                    <!-- /.description-block -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-outline-secondary " asp-controller="Employer" asp-action="Index">Retour</a>
+                            <a class="btn btn-outline-info float-right" asp-controller="Employer" asp-action="Edit" asp-route-id="@Model.Id_emp">Modifier</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

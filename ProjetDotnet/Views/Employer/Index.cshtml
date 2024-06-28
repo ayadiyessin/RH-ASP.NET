@@ -1,0 +1,174 @@
+﻿@model IEnumerable<ProjetDotnet.Models.Employer>
+
+@{
+    ViewData["Title"] = "Liste Employer";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Liste des Employées</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Accueil </a></li>
+                        <li class="breadcrumb-item active">Liste des employées</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- TABLE: LATEST ORDERS -->
+                    <div class="card">
+                        <div class="card-header border-transparent">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h3 class="card-title">Liste des employées</h3>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a asp-action="Create" class="btn btn-outline-info float-right">Ajouter <i class="fa fa-plus-circle"></i></a>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-12">
+                                    <div class="card-tools ">
+                                        <div class="input-group input-group-sm" style="width: 200px;">
+                                            <input type="text" name="table_search" id="myInput" class="form-control " placeholder="Recherche">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>CIN</th>
+                                            <th>Nom & Prénom</th>
+                                            <th>Téléphone</th>
+                                            <th>Poste</th>
+                                            <th>Tache</th>
+                                            <th>Formation</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listedep">
+                                        @{int i=0;}
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.cin_emp)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.nom_emp) @Html.DisplayFor(modelItem => item.prenom_emp)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.numtell_emp)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Poste.Nom_post)
+                                                </td>
+                                                <td>
+                                                    @if(ViewBag.CountTache[i]>0)
+                                                    {
+                                                        int x = item.Id_emp;
+                                                        <a asp-area="" asp-controller="Tache" asp-action="Index" asp-route-id="@x">Liste des taches </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        int x = item.Id_emp;
+                                                        <a asp-area="" asp-controller="Tache" asp-action="Create" asp-route-id="@x">Ajouter Tache</a>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @if (ViewBag.CountFormation[i] > 0)
+                                                    {
+                                                        int x = item.Id_emp;
+                                                        <a asp-area="" asp-controller="EmployerFormation" asp-action="Index" asp-route-id="@x">Liste des formations </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        int x = item.Id_emp;
+                                                        <a asp-area="" asp-controller="EmployerFormation" asp-action="Create" asp-route-id="@x">Ajouter Formation</a>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id_emp">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+                                                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id_emp">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                    </a>
+                                                    <button class="btn btn-danger btn-sm openDeleteModal" id="openDeleteModal" data-url="@Url.Action("EmpArchiver", "Employer", new { id = @item.Id_emp })">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                    </button>
+                                                    @* <a class="btn btn-danger btn-sm" asp-action="Archiver" asp-route-id="@item.Id_emp">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                    </a> *@
+                                                </td>
+                                            </tr>
+                                            i++;
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<div id="modalContainer"></div>
+@section scripts {
+
+    <script>
+        $('.openDeleteModal').click(function () {
+            var url = $(this).data('url');
+            $.get(url, function (data) {
+                $('#modalContainer').html(data);
+                $('#deleteModal').modal('show');
+            });
+        });
+
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#listedep tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}
